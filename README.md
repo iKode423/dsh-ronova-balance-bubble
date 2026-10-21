@@ -62,14 +62,46 @@
       name: '@local/ronova-balance-bubble'
 ```
 
-推荐流程：
+### 从 GitHub 安装（推荐）
 
 1. 先安装 [若娜瓦主题](https://github.com/iKode423/dsh-ronova-theme)：本插件在依赖里声明了它，气泡会挂在它打理的侧栏头像区域上方。
-2. 打开 Harness 的「插件」页，从本地目录安装本包。
-3. 确认插件列表里出现「若娜瓦余额气泡 / Ronova Balance Bubble」。
-4. 刷新页面，侧栏底部头像上方即可看到气泡。
+2. 打开 Harness 侧栏的「插件」页，点「添加插件」。
+3. 在包名输入框中填入仓库地址：
 
-手动方式（开发时常用）：
+   ```text
+   https://github.com/iKode423/dsh-ronova-balance-bubble
+   ```
+
+   也可以使用 pnpm 的 GitHub 简写：
+
+   ```text
+   github:iKode423/dsh-ronova-balance-bubble
+   ```
+
+4. Host 会先把地址识别为「Git 仓库」并检查仓库能否访问，随后显示读到的包名、简介与版本，确认后点「安装」。
+5. 安装完成后点「立即启用」；若对话框已关闭，也可以在组合包详情里打开开关。
+6. 刷新页面，侧栏底部头像上方即可看到气泡。
+
+从 GitHub 安装由 pnpm 直接拉取仓库，不经过 npm 注册表，因此需要本机装有 `git`，并且能访问 `github.com`。如果连不上 GitHub，安装对话框里的「改用国内镜像」只切换 npm 注册表，不能代替仓库下载；请改用下面的本地目录方式，或先给 Git 配置代理。
+
+GitHub 安装固定的是安装时拉取到的代码，不会随仓库后续提交自动升级。更新时先在插件页移除旧版本，再用同一地址重新安装。命令行等价安装：
+
+```bash
+# 将 web 换成实际使用的 profile 名
+dsh plugin --profile web add github:iKode423/dsh-ronova-balance-bubble
+```
+
+命令行安装后如组合包未自动启用，到「插件」页打开它的开关即可。
+
+### 从本地目录安装
+
+1. 先安装 [若娜瓦主题](https://github.com/iKode423/dsh-ronova-theme)。
+2. 打开「插件」页 →「添加插件」，填入本仓库的绝对路径。
+3. 确认包名与描述后安装，完成后启用组合包并刷新页面。
+
+本地目录安装适合开发调试：以 `file:` / `link:` 方式接入时，修改 `client.js` 后通常可以直接热重载，不必重新安装。
+
+### 手动方式（开发时常用）
 
 1. 把仓库目录 link 进当前 profile 的 `node_modules`（`pnpm link` 或 `pnpm add file:../ronova-balance-bubble`）。
 2. 在 profile 的 Cordis 配置里加入上面的 `insert` 片段。
