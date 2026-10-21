@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Balance thought bubble">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#20171A"/>
+  <path d="M 16 27 C 14 19 22 15 27 18 C 30 11 40 11 43 18 C 49 15 55 19 54 25 C 59 26 60 32 56 34 C 57 40 52 43 48 41 C 46 46 39 46 37 42 C 33 46 27 44 26 40 C 21 41 17 37 19 33 C 15 31 14 29 16 27 Z" fill="#FFFDF8" stroke="#1B0E11" stroke-width="2.2" stroke-linejoin="round"/>
+  <circle cx="17" cy="47" r="3.2" fill="#FFFDF8" stroke="#1B0E11" stroke-width="1.7"/>
+  <circle cx="10" cy="54" r="2" fill="#FFFDF8" stroke="#1B0E11" stroke-width="1.4"/>
+  <circle cx="42" cy="31" r="3" fill="#8A1220"/>
+</svg>

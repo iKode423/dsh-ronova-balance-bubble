@@ -1,0 +1,39 @@
+{
+  "name": "@local/ronova-balance-bubble",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Shows recharge and bonus balances in a thought bubble above the Ronova sidebar avatar.",
+  "author": "iKode423 <ikodecc@163.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iKode423/dsh-ronova-balance-bubble.git"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@local/ronova",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}

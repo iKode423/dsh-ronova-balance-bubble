@@ -1,0 +1,3 @@
+- insert:
+    - id: ronova-balance-bubble
+      name: '@local/ronova-balance-bubble'
